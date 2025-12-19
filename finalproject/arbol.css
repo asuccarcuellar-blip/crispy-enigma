@@ -213,4 +213,30 @@ footer {
   h1 {
     font-size: 2.5em;
   }
+  /* --- Image blocks --- */
+.image-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Dos imágenes lado a lado */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Tablet y más grande */
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 }
