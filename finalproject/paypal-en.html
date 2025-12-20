@@ -19,6 +19,9 @@ HEADER + NAV (TOP BAR) – ENGLISH
     <h1 class="site-title">The House in the Tree</h1>
   </header>
   <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
     <ul>
       <li><a href="index-en.html">Home</a></li>
       <li><a href="about-en.html">About Us</a></li>
@@ -103,6 +106,14 @@ HEADER + NAV (TOP BAR) – ENGLISH
             alert('An error occurred during the transaction.');
         }
     }).render('#paypal-button-container');
+</script>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
 </script>
 
 </body>

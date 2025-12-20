@@ -15,6 +15,9 @@ HEADER + NAV (TOP BAR)
     <h1 class="site-title">La casa en el árbol</h1>
   </header>
   <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="quienes-somos.html">Quiénes Somos</a></li>
@@ -80,6 +83,32 @@ HEADER + NAV (TOP BAR)
     </div>
   </section>
 
+  <table>
+    <tr>
+      <th>Package Name</th>
+      <th>Description</th>
+      <th>Nights</th>
+      <th>Cost per Person</th>
+    </tr>
+    <tr>
+    <td class="text">Weekend Escape</td>
+    <td class="text">Two breakfasts, a trail map, a pass for daily yoga</td>
+    <td>4</td>
+    <td>$600</td>
+    </tr>
+     <tr>
+    <td class="text">Zen Retreat</td>
+    <td class="text">Four breakfasts, a trail map, a pass for daily yoga</td>
+    <td>4</td>
+    <td>$600</td>
+    </tr>
+      <tr>
+    <td class="text">Kayak Away</td>
+    <td class="text">Two reakfasts, two hours of kayak rental daily, a trail map</td>
+    <td>2</td>
+    <td>$500</td>
+    </tr>
+  </table>
   <!-- =====================
        CTA CONTACTO
        ===================== -->
@@ -96,6 +125,14 @@ HEADER + NAV (TOP BAR)
   <footer>
     <p>© Fundación La Casa en el Árbol</p>
   </footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>

@@ -15,6 +15,9 @@ HEADER + NAV (TOP BAR)
     <h1 class="site-title">La casa en el árbol</h1>
   </header>
   <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="quienes-somos.html">Quiénes Somos</a></li>
@@ -91,6 +94,14 @@ HEADER + NAV (TOP BAR)
   <footer>
     <p>© Fundación La Casa en el Árbol</p>
   </footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>

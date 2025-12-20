@@ -57,6 +57,9 @@ nav ul {
   padding-top: 2em;       
   padding-bottom: 2em;   
   gap: 1.5rem;
+  list-style: none;      
+  margin: 0;             
+  padding-left: 0;  
 }
 
 nav a {
@@ -159,6 +162,25 @@ footer {
   padding: 2rem;
 }
 
+table {
+margin: auto;
+border: 1px solid #97b89f;  
+width: 90%;
+border-collapse: collapse;
+}
+td, 
+th {
+       padding: 5px;
+       border: 1px solid #97b89f;
+}
+td{
+   text-align: center;    
+}
+.text {
+       text-align: left;
+}
+tr:nth-of-type(even) {background-color: #dfedf8;}
+
 /* ----------------------
         MEDIA QUERIES
 ------------------------*/
@@ -239,4 +261,43 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+}
+/* ======================
+   MENÚ HAMBURGUESA
+====================== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--soft);
+  cursor: pointer;
+}
+
+/* --- Móvil --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
 }
