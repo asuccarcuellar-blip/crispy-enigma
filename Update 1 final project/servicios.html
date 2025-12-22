@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | La Casa en el Árbol</title>
+  <link rel="stylesheet" href="arbol.css" />
+</head>
+<body>
+
+<div class="top-bar">
+  <header class="site-header">
+    <h1 class="site-title">La casa en el árbol</h1>
+  </header>
+  <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="como-recibir-apoyo.html">Cómo Recibir Apoyo</a></li>
+      <li><a href="donations.html">Donaciones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index-en.html">English</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+  <section id="home">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <p>Espacio para una descripción general del acompañamiento ofrecido.</p>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+      <h2>Áreas de Apoyo</h2>
+      <div class="grid">
+        <div class="card">Apoyo emocional individual</div>
+        <div class="card">Bienestar y autocuidado</div>
+        <div class="card">Salud mental comunitaria</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="services">
+    <div class="container">
+      <h2>Modalidades de Atención</h2>
+      <div class="grid">
+        <div class="card">Sesiones individuales</div>
+        <div class="card">Talleres y círculos</div>
+        <div class="card">Acompañamiento continuo</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+      <h2>¿A Quiénes Está Dirigido?</h2>
+      <p>Espacio para describir población beneficiaria y criterios generales.</p>
+    </div>
+  </section>
+
+
+  <section id="access">
+    <div class="container">
+      <h2>Nuestro Enfoque de Cuidado</h2>
+      <p>Descripción del enfoque ético, informado por trauma y bienestar integral.</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© Fundación La Casa en el Árbol</p>
+  </footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

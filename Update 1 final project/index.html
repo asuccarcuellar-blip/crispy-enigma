@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="arbol.css" />
+  <title>La Casa en el Árbol</title>
+</head>
+
+<body>
+
+
+<div class="top-bar">
+  <header class="site-header">
+    <h1 class="site-title">La casa en el árbol</h1>
+  </header>
+  <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="como-recibir-apoyo.html">Cómo Recibir Apoyo</a></li>
+      <li><a href="donations.html">Donaciones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index-en.html">English</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<section id="home">
+  <div class="container">
+    <h2>La Casa en el Árbol.</h2>
+    <p>Fundación sin ánimo de lucro 501(c)(3) que promueve el bienestar 
+      y la salud mental de las mujeres del área de Boston, a través de la exploración 
+      consciente de la historia familiar,la biodecodificación emocional, y otras metodologías alternativas.</p>
+    <a href="#donations" class="btn">Apoyar</a>
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="container">
+    <h2>Qué hacemos</h2>
+    <p>Brindamos apoyo a mujeres que buscan sanar y crecer en comunidad.
+      Aquí encontrarás un lugar seguro para explorar tus emociones, compartir experiencias
+      y descubrir herramientas para el bienestar emocional.
+    </p>
+  </div>
+</section>
+
+
+<section id="services">
+  <div class="container">
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">Servicio 1</div>
+      <div class="card">Servicio 2</div>
+      <div class="card">Servicio 3</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="access">
+  <div class="container">
+    <h2>Cómo Recibir Nuestro Apoyo</h2>
+    <p>Explicación de pasos, requisitos o procesos.</p>
+  </div>
+</section>
+
+
+<section id="donations">
+  <div class="container">
+    <h2>Donaciones</h2>
+    <p>Información para donantes.</p>
+    <a href="#" class="btn">Donar Ahora</a>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="container">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre" />
+      <input type="email" placeholder="Correo electrónico" />
+      <textarea rows="5" placeholder="Mensaje"></textarea>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <p>© Fundación La Casa en el Árbol</p>
+</footer>
+
+
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelector(".top-bar")
+    .classList.toggle("shrink", window.scrollY > 50);
+});
+</script>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
