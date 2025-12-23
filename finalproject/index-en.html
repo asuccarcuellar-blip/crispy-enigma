@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The House in the Tree | Foundation</title>
-<link rel="stylesheet" href="arbol.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="arbol.css" />
+  <title>The House in the Tree | Foundation</title>
 </head>
-<body>
 
+<body>
 
 <!-- =====================
 HEADER + NAV (TOP BAR) – ENGLISH
@@ -17,7 +17,7 @@ HEADER + NAV (TOP BAR) – ENGLISH
     <h1 class="site-title">The House in the Tree</h1>
   </header>
   <nav class="container">
-    <button class="menu-toggle" aria-label="Abrir menú">
+    <button class="menu-toggle" aria-label="Open menu">
   ☰
 </button>
     <ul>
@@ -31,54 +31,85 @@ HEADER + NAV (TOP BAR) – ENGLISH
     </ul>
   </nav>
 </div>
-</header>
-
 
 <!-- =====================
-HOME
+HOME PAGE
 ===================== -->
 <section id="home">
-<div class="container">
-<h2>Main message of the foundation</h2>
-<p>Placeholder for introductory text or mission statement.</p>
-<a href="donations-en.html" class="btn">Support Our Work</a>
-</div>
+  <div class="hero-content">
+    <h2>La Casa en el Arbol Foundation (The Tree House)</h2>
+    <p>We are a 501(c)(3) non-profit foundation promoting the wellbeing 
+      and mental health of women in the Boston area through conscious exploration 
+      of family history, emotional biodecoding, and other alternative methodologies.</p>
+    <a href="donations-en.html" class="btn">Support Our Work</a>
+  </div>
 </section>
-
 
 <!-- =====================
-ABOUT PREVIEW
+ABOUT US PREVIEW
 ===================== -->
-<section>
-<div class="container">
-<h2>Who We Are</h2>
-<p>Short institutional introduction.</p>
-</div>
+<section id="about">
+  <div class="container">
+    <h2>What We Do</h2>
+    <p>We provide support to women seeking to heal and grow in community.
+      Here you will find a safe space to explore your emotions, share experiences,
+      and discover tools for emotional wellbeing.
+    </p>
+  </div>
 </section>
-
 
 <!-- =====================
 SERVICES PREVIEW
 ===================== -->
 <section id="services">
-<div class="container">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card">Service Area 1</div>
-<div class="card">Service Area 2</div>
-<div class="card">Service Area 3</div>
-</div>
-</div>
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">Individual conscious conversation sessions</div>
+      <div class="card">Personal growth lectures and workshops</div>
+      <div class="card">Training for public and private organizations</div>
+      <div class="card">Dissemination of alternative methodologies for mental and emotional wellbeing</div>
+    </div>
+  </div>
 </section>
 
+<!-- =====================
+HOW TO RECEIVE SUPPORT
+===================== -->
+<section id="access">
+  <div class="container">
+    <h2>How to Receive Our Support</h2>
+    <div class="grid">
+      <div class="card">1. Contact Us</div>
+      <div class="card">2. We evaluate your eligibility</div>
+      <div class="card">3. Receive your service and improve your mental and emotional wellbeing</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+DONATIONS
+===================== -->
+<section id="donations">
+  <div class="container">
+    <h2>Donations</h2>
+    <p>We are a 501(c)(3) non-profit organization. All donations are tax-deductible 
+      and directly contribute to the wellbeing and health of vulnerable communities 
+      in the Boston area and the East Coast of the United States.</p><br>
+    <a href="#" class="btn">Donate Now</a>
+  </div>
+</section>
 
 <!-- =====================
 FOOTER
 ===================== -->
 <footer>
-<p>© La Casa en el Arbol Foundation</p>
+  <p>© The House in the Tree Foundation</p>
 </footer>
 
+<!-- =====================
+SCRIPTS
+===================== -->
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
@@ -86,6 +117,18 @@ FOOTER
   toggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelector(".top-bar")
+    .classList.toggle("shrink", window.scrollY > 50);
+});
+
+window.addEventListener('scroll', () => {
+  const home = document.querySelector('#home');
+  home.style.backgroundPositionY = -(window.scrollY * 0.5) + 'px';
+});
 </script>
 
 </body>

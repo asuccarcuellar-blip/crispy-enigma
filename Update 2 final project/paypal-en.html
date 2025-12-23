@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay with PayPal | The House in the Tree</title>
+    <link rel="stylesheet" href="arbol.css" />
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID_HERE&currency=USD"></script>
+</head>
+<body>
+
+<!-- =====================
+HEADER + NAV (TOP BAR) – ENGLISH
+===================== -->
+<div class="top-bar">
+  <header class="site-header">
+    <h1 class="site-title">The House in the Tree</h1>
+  </header>
+  <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
+    <ul>
+      <li><a href="index-en.html">Home</a></li>
+      <li><a href="about-en.html">About Us</a></li>
+      <li><a href="services-en.html">Services</a></li>
+      <li><a href="access-en.html">How to Receive Support</a></li>
+      <li><a href="donations-en.html">Donations</a></li>
+      <li><a href="contact-en.html">Contact</a></li>
+      <li><a href="index.html">Español</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<section id="home">
+    <div class="container">
+        <h2>Pay with PayPal</h2>
+        <p>Your contribution helps sustain our emotional support and wellbeing services.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Secure Contribution</h2>
+        <p>You can make a one-time contribution securely using PayPal.</p>
+    </div>
+</section>
+
+<section id="payments">
+    <div class="container" style="text-align: center;">
+        <!-- PayPal Button Container -->
+        <div id="paypal-button-container"></div>
+    </div>
+</section>
+
+<section id="access">
+    <div class="container">
+        <h2>Transparency & 501(c)(3) Status</h2>
+        <p>
+            The House in the Tree Foundation is a registered 501(c)(3) nonprofit organization.
+            All donations are tax-deductible to the extent allowed by law.
+        </p>
+        <p>EIN: 12-3456789</p>
+        <p>For questions about donations or tax receipts, contact us at info@houseinthetreemass.org</p>
+    </div>
+</section>
+
+<footer>
+    <p>© The House in the Tree Foundation</p>
+</footer>
+
+<!-- PayPal Button Script -->
+<script>
+    paypal.Buttons({
+        style: {
+            layout: 'vertical',
+            color:  'gold',
+            shape:  'rect',
+            label:  'donate'
+        },
+
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '25.00'
+                    }
+                }]
+            });
+        },
+
+        onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+                alert(
+                    'Thank you, ' + details.payer.name.given_name +
+                    '! Your contribution was successful and may be tax-deductible.'
+                );
+            });
+        },
+
+        onError: function (err) {
+            console.error(err);
+            alert('An error occurred during the transaction.');
+        }
+    }).render('#paypal-button-container');
+</script>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

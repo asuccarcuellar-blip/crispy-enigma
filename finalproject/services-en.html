@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
-    <title>Services | La Casa en el Arbol</title>
-    <link
-        rel="stylesheet"
-        href="arbol.css"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | The House in the Tree</title>
+  <link rel="stylesheet" href="arbol.css" />
 </head>
 <body>
 <!-- =====================
-HEADER + NAV (TOP BAR) – ENGLISH
+HEADER + NAV (TOP BAR)
 ===================== -->
 <div class="top-bar">
   <header class="site-header">
     <h1 class="site-title">The House in the Tree</h1>
   </header>
   <nav class="container">
-    <button class="menu-toggle" aria-label="Abrir menú">
-  ☰
-</button>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
     <ul>
       <li><a href="index-en.html">Home</a></li>
       <li><a href="about-en.html">About Us</a></li>
@@ -36,46 +27,67 @@ HEADER + NAV (TOP BAR) – ENGLISH
     </ul>
   </nav>
 </div>
-    </header>
 
-    <section id="home">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Overview of support offered.</p>
-        </div>
-    </section>
+<!-- =====================
+       HERO SERVICES
+===================== -->
+<section id="home">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p></p>
+  </div>
+</section>
 
-    <section>
-        <div class="container">
-            <h2>Areas of Support</h2>
-            <div class="grid">
-                <div class="card">Emotional Support</div>
-                <div class="card">Wellbeing</div>
-                <div class="card">Community Care</div>
-            </div>
-        </div>
-    </section>
+<!-- =====================
+       SERVICE MODALITIES
+===================== -->
+<section id="services">
+  <div class="container">
+    <h2>Service Modalities</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/conversacion.jpg" alt="Individual Sessions" class="image-card">
+        Individual sessions
+      </div>
+      <div class="card">
+        <img src="images/conferencias.jpg" alt="Workshops and Circles" class="image-card">
+        Lectures, workshops and circles
+      </div>
+      <div class="card">
+        <img src="images/acompana.jpeg" alt="Continuous Support" class="image-card">
+        Continuous support
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="services">
-        <div class="container">
-            <h2>Care Modalities</h2>
-            <div class="grid">
-                <div class="card">Individual Sessions</div>
-                <div class="card">Workshops</div>
-            </div>
-        </div>
-    </section>
+<!-- =====================
+       TARGET AUDIENCE
+===================== -->
+<section>
+  <div class="container">
+    <h2>Who Is It For?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/todos.jpg" alt="Beneficiaries" class="image-card">
+        Our services are primarily aimed at Spanish-speaking women in the Boston area. 
+        We also offer our services to other vulnerable populations seeking to improve their 
+        mental health through exploration and understanding of their family history.
+        
+        La Casa en el Arbol (The Tree House) also provides services to public and private organizations 
+        that want to positively impact the populations under their care.
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="access">
-        <div class="container">
-            <h2>Care Framework</h2>
-            <p>Trauma-informed approach.</p>
-        </div>
-    </section>
+<!-- =====================
+       FOOTER
+===================== -->
+<footer>
+  <p>© La Casa en el Árbol</p>
+</footer>
 
-    <footer>
-        <p>© La Casa en el Arbol Foundation</p>
-    </footer>
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
@@ -84,7 +96,5 @@ HEADER + NAV (TOP BAR) – ENGLISH
     navMenu.classList.toggle('show');
   });
 </script>
-
 </body>
-
 </html>

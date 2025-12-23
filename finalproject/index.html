@@ -36,11 +36,11 @@ HEADER + NAV (TOP BAR)
 HOME PAGE
 ===================== -->
 <section id="home">
-  <div class="container">
+  <div class="hero-content">
     <h2>La Casa en el Árbol.</h2>
-    <p>Fundación sin ánimo de lucro 501(c)(3) que promueve el bienestar 
+    <p>Somos una Fundación sin ánimo de lucro 501(c)(3) que promueve el bienestar 
       y la salud mental de las mujeres del área de Boston, a través de la exploración 
-      consciente de la historia familiar,la biodecodificación emocional, y otras metodologías alternativas.</p>
+      consciente de la historia familiar, la biodecodificación emocional y otras metodologías alternativas.</p>
     <a href="#donations" class="btn">Apoyar</a>
   </div>
 </section>
@@ -65,9 +65,10 @@ SERVICIOS
   <div class="container">
     <h2>Servicios</h2>
     <div class="grid">
-      <div class="card">Servicio 1</div>
-      <div class="card">Servicio 2</div>
-      <div class="card">Servicio 3</div>
+      <div class="card">Sesiones individuales de conversación consciente</div>
+      <div class="card">Conferencias y talleres de crecimiento personal</div>
+      <div class="card">Capacitaciones para organizaciones públicas y privadas</div>
+      <div class="card">Divulgación de metodologías alternativas para el bienestar mental y emocional</div>
     </div>
   </div>
 </section>
@@ -78,7 +79,10 @@ CÓMO RECIBIR LOS BENEFICIOS
 <section id="access">
   <div class="container">
     <h2>Cómo Recibir Nuestro Apoyo</h2>
-    <p>Explicación de pasos, requisitos o procesos.</p>
+     <div class="grid">
+      <div class="card">Contáctanos</div>
+      <div class="card">Evaluamos tu elegibilidad</div>
+      <div class="card">Recibe tu servicio y mejora tu bienestar mental y emocional</div>
   </div>
 </section>
 
@@ -88,25 +92,13 @@ DONACIONES
 <section id="donations">
   <div class="container">
     <h2>Donaciones</h2>
-    <p>Información para donantes.</p>
+    <p>Somos una organización sin ánimo de lucro 501(c)(3). Todas tus donaciones
+      son deducibles de impuestos y contribuyen enormemente al bienestar y salud de 
+    las comunidades vulnerables del área de Boston y la Costa Este de los Estados Unidos</p><br>
     <a href="#" class="btn">Donar Ahora</a>
   </div>
 </section>
 
-<!-- =====================
-CONTACTO
-===================== -->
-<section id="contact">
-  <div class="container">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre" />
-      <input type="email" placeholder="Correo electrónico" />
-      <textarea rows="5" placeholder="Mensaje"></textarea>
-      <button class="btn" type="submit">Enviar</button>
-    </form>
-  </div>
-</section>
 
 <!-- =====================
 FOOTER
@@ -130,6 +122,27 @@ window.addEventListener("scroll", () => {
 
   toggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
+  });
+</script>
+<script>
+  // Shrink top-bar al hacer scroll
+  window.addEventListener("scroll", () => {
+    document.querySelector(".top-bar")
+      .classList.toggle("shrink", window.scrollY > 50);
+  });
+
+  // Menú hamburguesa
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+
+  // Parallax para #home
+  window.addEventListener('scroll', () => {
+    const home = document.querySelector('#home');
+    home.style.backgroundPositionY = -(window.scrollY * 0.5) + 'px';
   });
 </script>
 </body>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | La Casa en el Árbol</title>
+  <link rel="stylesheet" href="arbol.css" />
+</head>
+<body>
+<!-- =====================
+HEADER + NAV (TOP BAR)
+===================== -->
+<div class="top-bar">
+  <header class="site-header">
+    <h1 class="site-title">La casa en el árbol</h1>
+  </header>
+  <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="como-recibir-apoyo.html">Cómo Recibir Apoyo</a></li>
+      <li><a href="donations.html">Donaciones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index-en.html">English</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- =====================
+       HERO SERVICIOS
+===================== -->
+<section id="home">
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <p>Espacio para una descripción general del acompañamiento ofrecido.</p>
+
+  </div>
+</section>
+
+
+
+<!-- =====================
+       MODALIDADES
+===================== -->
+<section id="services">
+  <div class="container">
+    <h2>Modalidades de Atención</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/conversacion.jpg" alt="Sesiones Individuales" class="image-card">
+        Sesiones individuales
+      </div>
+      <div class="card">
+        <img src="images/conferencias.jpg" alt="Talleres y Círculos" class="image-card">
+        Conferencias, Talleres y círculos
+      </div>
+      <div class="card">
+        <img src="images/acompana.jpeg" alt="Acompañamiento Continuo" class="image-card">
+        Acompañamiento contínuo
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+       A QUIÉN VA DIRIGIDO
+===================== -->
+<<section>
+  <div class="container">
+    <h2>¿A quiénes está dirigido?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/todos.jpg" alt="Beneficiarias" class="image-card">
+        Nuestros servicios están dirigidos principalmente a las mujeres de habla hispana 
+        del área de Boston. Tambien ofrecemos nuestros servicios a otras poblaciones 
+        vulnerables, en búsca de mejorar su salud mental desde la exploración y comprensión
+        de su historia familiar.
+        
+        La Casa en el Arbol también ofrece servicios a organizaciones públicas y privadas que
+        quieran impactar positivamente en la población que tengan bajo su cuidado.
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =====================
+       FOOTER
+===================== -->
+<footer>
+  <p>© Fundación La Casa en el Árbol</p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

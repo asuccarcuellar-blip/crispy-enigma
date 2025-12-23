@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | The House in the Tree</title>
+<link rel="stylesheet" href="arbol.css" />
+</head>
+<body>
+<!-- =====================
+HEADER + NAV (TOP BAR) – ENGLISH
+===================== -->
+<div class="top-bar">
+  <header class="site-header">
+    <h1 class="site-title">The House in the Tree</h1>
+  </header>
+  <nav class="container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+  ☰
+</button>
+    <ul>
+      <li><a href="index-en.html">Home</a></li>
+      <li><a href="about-en.html">About Us</a></li>
+      <li><a href="services-en.html">Services</a></li>
+      <li><a href="access-en.html">How to Receive Support</a></li>
+      <li><a href="donations-en.html">Donations</a></li>
+      <li><a href="contact-en.html">Contact</a></li>
+      <li><a href="index.html">Español</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+<section id="home"><div class="container"><h2>About Us</h2><p>Foundation identity and purpose.</p></div></section>
+<section><div class="container"><h2>Our Story</h2><p>Origin and motivation.</p></div></section>
+<section id="services"><div class="container"><h2>Mission, Vision & Values</h2><div class="grid"><div class="card">Mission</div><div class="card">Vision</div><div class="card">Values</div></div></div></section>
+<section><div class="container"><h2>Our Team</h2><div class="grid"><div class="card">Member</div><div class="card">Member</div></div></div></section>
+<section id="access"><div class="container"><h2>Our Approach</h2><p>Ethical and care principles.</p></div></section>
+<footer><p>© La Casa en el Arbol Foundation</p></footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

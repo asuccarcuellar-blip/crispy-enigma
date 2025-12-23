@@ -23,6 +23,7 @@ body {
 .container {
   max-width: 1100px;
   margin: auto;
+  padding: 0 1.5rem;
 }
 
 .site-header {
@@ -99,12 +100,42 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
-/* --- Hero --- */
+/* ======================
+   HERO SECTION
+====================== */
+
 #home {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), var(--accent);
-  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+  color: white;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("images/casa.jpeg");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; /* <--- esto activa el parallax */
   padding: 6rem 3rem;
+}
+
+.hero-content {
+  max-width: 800px; /* limita el ancho del texto */
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 /* --- Services y Access --- */
@@ -263,6 +294,21 @@ tr:nth-of-type(even) {background-color: #dfedf8;}
 }
 
 }
+
+/* ======================
+   Títulos y texto de secciones
+====================== */
+
+section h2 {
+  font-size: 2rem; /* tamaño mayor para los títulos */
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  font-size: 1.2rem; /* texto un poco más grande */
+  line-height: 1.8;
+}
+
 /* ======================
    MENÚ HAMBURGUESA
 ====================== */
@@ -299,5 +345,58 @@ tr:nth-of-type(even) {background-color: #dfedf8;}
 
   nav ul.show {
     display: flex;
+  }
+}
+
+/* ======================
+   IMÁGENES
+====================== */
+
+.image-section {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Imágenes dentro de cards */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  #home {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+/* ======================
+   Títulos y texto responsivos
+====================== */
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 2.4rem;
+  }
+
+  section p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section h2 {
+    font-size: 2.8rem;
+  }
+
+  section p {
+    font-size: 1.4rem;
   }
 }
