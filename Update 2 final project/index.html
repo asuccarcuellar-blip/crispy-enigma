@@ -9,9 +9,7 @@
 
 <body>
 
-<!-- =====================
-HEADER + NAV (TOP BAR)
-===================== -->
+
 <div class="top-bar">
   <header class="site-header">
     <h1 class="site-title">La casa en el árbol</h1>
@@ -32,9 +30,7 @@ HEADER + NAV (TOP BAR)
   </nav>
 </div>
 
-<!-- =====================
-HOME PAGE
-===================== -->
+
 <section id="home">
   <div class="hero-content">
     <h2>La Casa en el Árbol.</h2>
@@ -45,9 +41,7 @@ HOME PAGE
   </div>
 </section>
 
-<!-- =====================
-QUIÉNES SOMOS
-===================== -->
+
 <section id="about">
   <div class="container">
     <h2>Qué hacemos</h2>
@@ -58,9 +52,7 @@ QUIÉNES SOMOS
   </div>
 </section>
 
-<!-- =====================
-SERVICIOS
-===================== -->
+
 <section id="services">
   <div class="container">
     <h2>Servicios</h2>
@@ -73,9 +65,7 @@ SERVICIOS
   </div>
 </section>
 
-<!-- =====================
-CÓMO RECIBIR LOS BENEFICIOS
-===================== -->
+
 <section id="access">
   <div class="container">
     <h2>Cómo Recibir Nuestro Apoyo</h2>
@@ -86,9 +76,7 @@ CÓMO RECIBIR LOS BENEFICIOS
   </div>
 </section>
 
-<!-- =====================
-DONACIONES
-===================== -->
+
 <section id="donations">
   <div class="container">
     <h2>Donaciones</h2>
@@ -100,16 +88,12 @@ DONACIONES
 </section>
 
 
-<!-- =====================
-FOOTER
-===================== -->
+
 <footer>
   <p>© Fundación La Casa en el Árbol</p>
 </footer>
 
-<!-- =====================
-SCROLL SCRIPT
-===================== -->
+
 <script>
 window.addEventListener("scroll", () => {
   document.querySelector(".top-bar")
@@ -125,13 +109,13 @@ window.addEventListener("scroll", () => {
   });
 </script>
 <script>
-  // Shrink top-bar al hacer scroll
+
   window.addEventListener("scroll", () => {
     document.querySelector(".top-bar")
       .classList.toggle("shrink", window.scrollY > 50);
   });
 
-  // Menú hamburguesa
+ 
   const toggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
 
@@ -139,7 +123,7 @@ window.addEventListener("scroll", () => {
     navMenu.classList.toggle('show');
   });
 
-  // Parallax para #home
+
   window.addEventListener('scroll', () => {
     const home = document.querySelector('#home');
     home.style.backgroundPositionY = -(window.scrollY * 0.5) + 'px';
