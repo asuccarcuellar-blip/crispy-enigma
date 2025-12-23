@@ -55,17 +55,37 @@ HEADER + NAV (TOP BAR)
   <!-- =====================
        FORMULARIO DE CONTACTO
        ===================== -->
-  <section id="services">
-    <div class="container">
-      <h2>Escríbenos</h2>
-      <form>
-        <input type="text" placeholder="Nombre" />
-        <input type="email" placeholder="Correo electrónico" />
-        <textarea rows="5" placeholder="Mensaje"></textarea>
-        <button class="btn" type="submit">Enviar mensaje</button>
-      </form>
-    </div>
-  </section>
+  <section id="contact">
+  <div class="container">
+    <h2>Write to Us</h2>
+    <form method="POST" action="https://formspree.io/f/mojapggg" onsubmit="return validateContactForm();">
+      <label for="name">*Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">*Email:</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">*Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function validateContactForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if(!name || !email || !message) {
+    alert("Please fill in all required fields.");
+    return false;
+  }
+  return true;
+}
+</script>
 
   <!-- =====================
        MENSAJE DE SEGURIDAD

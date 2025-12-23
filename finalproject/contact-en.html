@@ -55,14 +55,20 @@ CONTACT INFORMATION
 <!-- =====================
 CONTACT FORM
 ===================== -->
-<section id="services">
+<section id="contact">
   <div class="container">
     <h2>Write to Us</h2>
-    <form>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button class="btn" type="submit">Send Message</button>
+    <form method="POST" action="https://formspree.io/f/mojapggg" onsubmit="return validateContactForm();">
+      <label for="name">*Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">*Email:</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">*Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </div>
 </section>
